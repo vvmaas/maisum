@@ -5,7 +5,7 @@ import logo_maisum_white from "../../assets/images/logo/logo_maisum_white.png"
 
 export default function Home(){
     return(
-        <Container color="#8415deb1">
+        <Container color="#8415deb1" id="home">
             <Wrapper>
                 <Logo>
                     <img src={logo_maisum_white} alt="+1" />

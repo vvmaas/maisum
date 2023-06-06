@@ -7,7 +7,7 @@ import playstore_en from "../../assets/images/playstore_en.svg"
 
 export default function Download() {
     return (
-        <Container color="#fff">
+        <Container color="#fff" id="download">
             <StyledWrapper>
                 <Content>
                     <StyledTitle color="#000000">

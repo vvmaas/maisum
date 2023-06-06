@@ -5,7 +5,7 @@ import Title from "../Title";
 
 export default function About() {
     return (
-        <Container color="#000">
+        <Container color="#000" id="about">
             <StyledWrapper>
                 <Title color="#fff">
                     <h1>

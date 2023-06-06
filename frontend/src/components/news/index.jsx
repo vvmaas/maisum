@@ -4,14 +4,14 @@ import Wrapper from "../Wrapper";
 
 export default function News() {
     return(
-        <Container color="#fff">
+        <Container color="#fff"  id="news">
             <StyledWrapper>
                 <Title>
                     <h1>
                         O que estamos fazendo?
                     </h1>
                     <p>
-                        Fique por dentro de premiações, novos temas, eventos e mais...
+                        Saiba tudo sobre premiações, novos temas, eventos e mais...
                     </p>
                 </Title>
 

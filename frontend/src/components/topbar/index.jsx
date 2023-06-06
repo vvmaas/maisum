@@ -1,33 +1,46 @@
 import styled from "styled-components";
+import { Link } from "react-scroll"
 import logo_maisum_white from "../../assets/images/logo/logo_maisum_white.png"
 
 export default function TopBar() {
     return (
         <Container>
             <Wrapper>
-                <Logo>
-                    <img src={logo_maisum_white} alt="+1" />
-                </Logo>
+                <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
+                    <Logo>
+                        <img src={logo_maisum_white} alt="+1" />
+                    </Logo>
+                </Link>
                 <Sections>
                     <Section>
-                        Início
+                        <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
+                            Início
+                        </Link>
                     </Section>
 
                     <Section>
-                        Sobre
+                        <Link to="about" spy={true} smooth={true} offset={0} duration={500}>
+                            Sobre
+                        </Link>
                     </Section>
 
                     <Section>
-                        Novidades
+                        <Link to="news" spy={true} smooth={true} offset={0} duration={500}>
+                            Novidades
+                        </Link>
                     </Section>
 
                     <Section>
-                        Inscrever-se
+                        <Link to="enroll" spy={true} smooth={true} offset={0} duration={500}>
+                            Inscreva-se
+                        </Link>
                     </Section>
                     <Download>
-                        <Section>
-                            Download
-                        </Section>
+                        <Link to="download" spy={true} smooth={true} offset={0} duration={500}>
+                            <Section>
+                                Download
+                            </Section>
+                        </Link>
                     </Download>
                 </Sections>
             </Wrapper>
@@ -82,6 +95,7 @@ const Logo = styled.div`
     width: fit-content;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
     img {
         width: 50px;
@@ -94,6 +108,7 @@ const Download = styled.div`
     padding: 5px 0;
     border-radius: 5px;
     background-color: #ffffff3e;
+    cursor: pointer;
     :hover {
         background-color: #ffffff5a;
         filter: brightness(1.4);

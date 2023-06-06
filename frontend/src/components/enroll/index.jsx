@@ -5,7 +5,7 @@ import Title from "../Title";
 
 export default function Enroll() {
     return (
-        <Container color="#8415deb1">
+        <Container color="#8415deb1" id="enroll">
             <StyledWrapper>
                 <Content>
                     <StyledTitle>
