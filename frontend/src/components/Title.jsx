@@ -24,5 +24,6 @@ const DefTitle = styled.div`
 
     p{
         font-size: 17px;
+        text-align: center;
     }
 `

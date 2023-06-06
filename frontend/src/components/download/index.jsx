@@ -19,8 +19,12 @@ export default function Download() {
                         </p>
                     </StyledTitle>
                     <StoreButtons>
-                        <img src={playstore_en} alt="Download at playstore" />
-                        <img src={appstore_en} alt="Download at appstore" />
+                        <a href="https://play.google.com/store/games?hl=pt-br" target="_blank">
+                            <img src={playstore_en} alt="Download at playstore" />
+                        </a>
+                        <a href="https://www.apple.com/br/app-store/" target="_blank">
+                            <img src={appstore_en} alt="Download at appstore" />
+                        </a>
                     </StoreButtons>
                 </Content>
             </StyledWrapper>
@@ -47,13 +51,17 @@ const Content = styled.div`
 const StoreButtons = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
 
     img{
+        width: 100%;
+        object-fit: contain;
+    }
+    a{
         width: 50%;
         max-width: 200px;
         margin: 0 10px;
-        object-fit: contain;
         cursor: pointer;
     }
 `

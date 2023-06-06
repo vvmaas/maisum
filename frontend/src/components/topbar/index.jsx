@@ -63,11 +63,27 @@ const Container = styled.div`
 `
 
 const Wrapper = styled.div`
-    width: 55vw;
+    width: 100%;
+    max-width: 1280px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
+
+    @media(max-width:1800px) {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
+
+    @media(max-width:1200px) {
+        padding-left: 96px;
+        padding-right: 96px;
+    }
+
+    @media(max-width:900px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
 `
 
 const Sections = styled.div`
