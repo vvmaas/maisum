@@ -25,7 +25,7 @@ export default function TopBar() {
                     </Section>
 
                     <Section>
-                        <Link to="news" spy={true} smooth={true} offset={0} duration={500}>
+                        <Link to="news" spy={true} smooth={true} offset={-80} duration={500}>
                             Novidades
                         </Link>
                     </Section>
@@ -84,6 +84,11 @@ const Wrapper = styled.div`
         padding-left: 32px;
         padding-right: 32px;
     }
+
+    @media(max-width:600px) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 `
 
 const Sections = styled.div`
@@ -95,7 +100,7 @@ const Sections = styled.div`
 `
 
 const Section = styled.p`
-    font-size: 20px;
+    font-size: max(15px, min(2vw, 20px));
     margin: 0 10px;
     cursor: pointer;
     color: #fafafa;

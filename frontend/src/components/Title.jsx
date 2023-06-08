@@ -9,7 +9,7 @@ export default function Title({children, ...props}) {
 }
 
 const DefTitle = styled.div`
-    margin-bottom: 9vh;
+    margin-bottom: max(13px, min(4vw, 9vh));
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -17,13 +17,18 @@ const DefTitle = styled.div`
     color: ${(props) => props.color ? props.color : '#000'};
 
     h1{
-        font-size: 33px;
+        font-size: max(24px, min(4vw, 33px));
         font-weight: bold;
-        margin-bottom: 25px;
+        margin-bottom: max(10px, min(2vw, 25px));
+        text-align: center;
     }
 
     p{
-        font-size: 17px;
+        font-size: max(15px, min(2vw, 17px));
         text-align: center;
+    }
+
+    @media(max-width: 600px) {
+        margin-bottom: 3.5vh;
     }
 `

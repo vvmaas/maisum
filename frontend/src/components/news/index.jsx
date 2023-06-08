@@ -1,19 +1,20 @@
 import styled from "styled-components";
 import Container from "../Container";
 import Wrapper from "../Wrapper";
+import Title from "../Title";
 
 export default function News() {
     return(
         <Container color="#fff"  id="news">
             <StyledWrapper>
-                <Title>
+                <StyledTitle>
                     <h1>
                         O que estamos fazendo?
                     </h1>
                     <p>
                         Saiba tudo sobre premiações, novos temas, eventos e mais...
                     </p>
-                </Title>
+                </StyledTitle>
 
                 <Text>
                     <NewsBox>
@@ -53,7 +54,7 @@ const StyledWrapper = styled(Wrapper)`
 `
 const NewsBox = styled.div`
     height: fit-content;
-    width: 40%;
+    width: 48%;
     padding: 15px;
     background-color: #8415de2d;
     border-radius: 5px;
@@ -61,32 +62,39 @@ const NewsBox = styled.div`
     h1 {
         padding-bottom: 15px;
         margin-bottom: 15px;
-        font-size: 27px;
+        font-size: max(21px, min(3vw, 27px));
         font-weight: bold;
         width: 100%;
         border-bottom: 1px solid #000;
     }
-`
 
-const Title = styled.div`
-    margin-bottom: 9vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    h1{
-        font-size: 33px;
-        font-weight: bold;
-        margin-bottom: 25px;
+    p {
+        font-size: max(15px, min(2vw, 18px));
     }
 
-    p{
-        font-size: 17px;
+    @media(max-width: 600px) {
+        width: 100%;
+        margin-bottom: 4vh;
+
+        h1 {
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+    }
+    }
+`
+
+const StyledTitle = styled(Title)`
+    h1, p{ 
+        text-align: left;
     }
 `
 
 const Text = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+
+    @media(max-width: 600px) {
+        flex-direction: column;
+        
+    }
 `

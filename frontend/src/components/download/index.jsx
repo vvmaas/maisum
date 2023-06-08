@@ -42,7 +42,6 @@ const StyledTitle = styled(Title)`
 `
 
 const Content = styled.div`
-    width: 60%;
     background-color: #8415de2d;
     padding: 40px;
     border-radius: 5px;
@@ -56,6 +55,7 @@ const StoreButtons = styled.div`
 
     img{
         width: 100%;
+        min-width: 90px;
         object-fit: contain;
     }
     a{

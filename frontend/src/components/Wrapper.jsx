@@ -11,7 +11,8 @@ export default function Wrapper({children, ...props}) {
 const DefWrapper = styled.div`
     width: 100%;
     max-width: 1280px;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -19,13 +19,13 @@ export default function Home(){
 const Logo = styled.div`
     margin-right: 3vw;
     img {
-        width: 350px;
+        width: max(100px, min(60vw, 350px));
     }
 
 `
 
 const Slogan = styled.h1`
-    font-size: 25px;
+    font-size: max(18px, min(4vw, 25px));
     color: #fff;
     cursor: default;
 
