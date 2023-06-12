@@ -1,8 +1,15 @@
 import styled from "styled-components";
+import { useState } from "react";
 import { Link } from "react-scroll"
+import { AiOutlineMenu } from "react-icons/ai"
 import logo_maisum_white from "../../assets/images/logo/logo_maisum_white.png"
+import DropdownMenu from "./DropdownMenu";
+
 
 export default function TopBar() {
+    const [menu, setMenu] = useState(false);
+
+
     return (
         <Container>
             <Wrapper>
@@ -43,6 +50,10 @@ export default function TopBar() {
                         </Link>
                     </Download>
                 </Sections>
+                <DropdownButton onClick={() => setMenu(!menu)}>
+                    <AiOutlineMenu />
+                </DropdownButton>
+                <DropdownMenu active={menu} setMenu={setMenu}/>
             </Wrapper>
         </Container>
     )
@@ -54,7 +65,7 @@ const Container = styled.div`
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: 7;
     width: 100vw;
     height: 80px;
     background-color: #8415deb1;
@@ -91,12 +102,34 @@ const Wrapper = styled.div`
     }
 `
 
+export const DropdownButton = styled.div`
+    display: none;
+    
+    @media(max-width: 900px) {
+        font-size: 35px;
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #fafafa;
+    
+        :hover {
+            color: #fff;
+            filter: brightness(2);
+        }
+    }
+`
+
 const Sections = styled.div`
     display: flex;
     width: fit-content;
     align-items: center;
     justify-content: center;
-
+    
+    @media(max-width: 900px) {
+        display: none;
+    }
 `
 
 const Section = styled.p`
@@ -112,7 +145,7 @@ const Section = styled.p`
     }
 `
 
-const Logo = styled.div`
+export const Logo = styled.div`
     width: fit-content;
     display: flex;
     justify-content: center;
