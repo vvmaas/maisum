@@ -60,7 +60,11 @@ const Container = styled.div`
     width: 100vw;
     background-color: #fafafa;
     padding-bottom: 15px;
-    box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);;
+    box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+
+    @media(min-width:900px) {
+        display: none;
+    }
 `
 
 const StyledWrapper = styled(Wrapper)`
