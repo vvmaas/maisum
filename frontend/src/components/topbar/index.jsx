@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll"
 import { AiOutlineMenu } from "react-icons/ai"
 import logo_maisum_white from "../../assets/images/logo/logo_maisum_white.png"
@@ -9,7 +9,13 @@ import DropdownMenu from "./DropdownMenu";
 export default function TopBar() {
     const [menu, setMenu] = useState(false);
 
-
+    useEffect(() => {
+        if (menu) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+     }, [menu]);
     return (
         <Container>
             <Wrapper>

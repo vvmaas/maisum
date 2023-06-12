@@ -36,4 +36,9 @@ const DefWrapper = styled.div`
         padding-left: 16px;
         padding-right: 16px;
     }
+
+    @media(max-height: 500px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 `
