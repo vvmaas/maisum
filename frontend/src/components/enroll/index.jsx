@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Container from "../Container";
 import Wrapper from "../Wrapper";
 import Title from "../Title";
+import EnrollForm from "./EnrollForm";
 
 export default function Enroll() {
     return (
@@ -13,9 +14,10 @@ export default function Enroll() {
                             Assine nossa newsletter!
                         </h1>
                         <p>
-                            Se inscreva e fique por dentro de todas as novidades do aplicativo
+                            Inscreva seu e-mail e receba todas as novidades do aplicativo
                         </p>
                     </StyledTitle>
+                    <EnrollForm />
                 </Content>
             </StyledWrapper>
         </Container>
@@ -35,4 +37,8 @@ const Content = styled.div`
     background-color: #ffffffc3;
     padding: 40px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `

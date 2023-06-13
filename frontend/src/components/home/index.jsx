@@ -31,6 +31,6 @@ const Slogan = styled.h1`
 
     :hover {
         text-shadow: rgba(255, 255, 255, 0.5) 0 0 4px;
-        filter: brightness(2);
+        filter: brightness(2); 
     }
 `

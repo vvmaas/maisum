@@ -20,6 +20,10 @@ const Container = styled.div`
     height: 100vh;
     width: 100vw;
     background-color: ${(props) => props.active ? "#0000008b" : "#0000000"};
+
+    @media(min-width:900px) {
+        display: none;
+    }
 `
 
 const Outside = styled.div`
